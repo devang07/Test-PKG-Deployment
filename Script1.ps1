@@ -1,15 +1,15 @@
 ﻿
 #Create Folders
-New-Item -ItemType Directory -Force -Path C:\Support\Logs
+New-Item -ItemType Directory -Force -Path C:\IT\Logs
 
 # Start a transcript session for debug logging
-Start-Transcript -Append C:\Support\Logs\PSScriptLog.txt
+Start-Transcript -Append C:\IT\Logs\PSScriptLog.txt
 
 
-New-Item -ItemType Directory -Force -Path C:\Support\Scripts
+New-Item -ItemType Directory -Force -Path C:\IT\Scripts
 
 # Download needed scripts
-Invoke-WebRequest "https://raw.githubusercontent.com/devang07/Test-PKG-Deployment/main/SoftwareInstall.ps1" -OutFile C:\Support\Scripts\SoftwareInstall.ps1
+Invoke-WebRequest "https://raw.githubusercontent.com/devang07/Test-PKG-Deployment/main/SoftwareInstall.ps1" -OutFile C:\IT\Scripts\SoftwareInstall.ps1
 #Invoke-WebRequest "https://raw.githubusercontent.com/cole-bermudez/Windows-Deployment/main/Windows-Setup.ps1" -OutFile C:\Support\Scripts\WindowsSetup.ps1
 
 # Set admin user PasswordExpires to never
