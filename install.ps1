@@ -16,7 +16,7 @@ Set-LocalUser -Name "admin" -PasswordNeverExpires 1
 Set-LocalUser -Name "chillit" -PasswordNeverExpires 1
 
 # Disable Privacy Settings after Deployment reboot
-#reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v DisablePrivacyExperience /t REG_DWORD /d 1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v DisablePrivacyExperience /t REG_DWORD /d 1
 
 # Enable Autologon after deployment reboot
 REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoAdminLogon /t REG_SZ /d 1 /f
